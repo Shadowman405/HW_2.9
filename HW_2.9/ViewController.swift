@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     var currentAnimationIndex = -1
     var currentBtnName = 0
     
-    let enu = Spring.AnimationPreset.self
     let animations: [Spring.AnimationPreset] = [
         .shake,
         .pop,
@@ -65,9 +64,6 @@ class ViewController: UIViewController {
         viewToAnimate.duration = 4
         viewToAnimate.delay = 0.2
         viewToAnimate.animate()
-        print(animations.count)
-        print(currentAnimationIndex)
-            print(currentBtnName)
         
         animationButtonLbl.setTitle("\(animations[currentBtnName])", for: .normal)
         }
@@ -80,6 +76,7 @@ class ViewController: UIViewController {
         animationNameLbl.text = "\(lblName)"
         animationButtonLbl.setTitle("\(btnName)", for: .normal)
     }
+        
     
     @IBAction func animateBtnClicked(_ sender: SpringButton) {
         nextAnim()
